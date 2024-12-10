@@ -1,0 +1,31 @@
+{
+	"name": "cluster",
+	"version": "1.0.1",
+	"description": "",
+	"scripts": {
+		"app": "npx nx dev app",
+		"build": "pnpm run -r build",
+		"start:prod": "node api/dist/main.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@nx/eslint": "19.0.0",
+		"@nx/vite": "19.0.0",
+		"@swc/types": "^0.1.7",
+		"@nx/web": "19.0.0",
+		"@vitest/ui": "^1.3.1",
+		"eslint": "~8.57.0",
+		"nx": "19.0.0",
+		"vite": "~5.0.0",
+		"vitest": "^1.3.1"
+	},
+	"dependencies": {},
+	"resolutions": {
+		"sharp": "0.32.6",
+		"sharp-ico": "0.1.5"
+	},
+	"swpm": "pnpm",
+	"packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+}

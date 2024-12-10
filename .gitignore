@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+.nx
+
+
+.nx/cache
+api/.env
+app/.env
+api/context-data/*.json
+docs/.vitepress/cache/*

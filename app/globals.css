@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 0%;
+		--foreground: 210 20% 98%;
+
+		--card: 224 71.4% 4.1%;
+		--card-foreground: 210 20% 98%;
+
+		--popover: 224 71.4% 4.1%;
+		--popover-foreground: 210 20% 98%;
+
+		--primary: 210 20% 98%;
+		--primary-foreground: 220.9 39.3% 11%;
+
+		--secondary: 215 27.9% 16.9%;
+		--secondary-foreground: 210 20% 98%;
+
+		--muted: 281 51% 7%;
+		--muted-foreground: 0 0% 100%;
+
+		--accent: 273 35% 10%;
+		--accent-foreground: 210 20% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 20% 98%;
+
+		--border: 0 0% 14%;
+		--input: 0 0% 100%;
+		--ring: 216 12.2% 83.9%;
+	}
+
+	.dark {
+		--background: 224 71.4% 4.1%;
+		--foreground: 210 20% 98%;
+
+		--card: 224 71.4% 4.1%;
+		--card-foreground: 210 20% 98%;
+
+		--popover: 224 71.4% 4.1%;
+		--popover-foreground: 210 20% 98%;
+
+		--primary: 210 20% 98%;
+		--primary-foreground: 220.9 39.3% 11%;
+
+		--secondary: 215 27.9% 16.9%;
+		--secondary-foreground: 210 20% 98%;
+
+		--muted: 215 27.9% 16.9%;
+		--muted-foreground: 217.9 10.6% 64.9%;
+
+		--accent: 215 27.9% 16.9%;
+		--accent-foreground: 210 20% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 20% 98%;
+
+		--border: 263 28% 28%;
+		--input: 215 27.9% 16.9%;
+		--ring: 216 12.2% 83.9%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+
+	/* .chat ul,
+	ol {
+		list-style: disc !important;
+		padding-left: 15px;
+		margin: 10px 0px;
+	} */
+
+	.chat-header {
+		font-weight: bold;
+		color: #8d8d8d;
+		margin-top: 8px;
+	}
+
+	.chat a {
+		@apply text-[#007bff] underline;
+	}
+	.chat-link {
+		@apply text-[#007bff] underline;
+	}
+
+	.chat-bold {
+		font-weight: bold;
+	}
+
+	.chat-italic {
+		font-style: italic;
+	}
+
+	.chat-code {
+		font-family: monospace;
+		padding: 2px 4px;
+		border-radius: 4px;
+	}
+
+	.chat-list {
+		padding-left: 20px;
+	}
+
+	.chat-ordered-list {
+		padding-top: 4px;
+	}
+
+	.chat-list-item {
+		list-style-type: disc;
+	}
+
+	.chat-ordered-list .chat-list-item {
+		/* list-style-type: decimal-leading-zero; */
+		list-style-type: none;
+	}
+
+	.gradient-border {
+		border-radius: 8px;
+		border-style: solid;
+		border-width: 1px;
+		border-image-source: linear-gradient(91deg, #2399dd 0%, #639 86%);
+		border-image-slice: 1;
+		background-image: linear-gradient(to bottom, #060004, #060004),
+			linear-gradient(91deg, #2399dd 0%, #639 86%);
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+	}
+
+	.cluster-card {
+		transition: 0.2s;
+		margin: 0 auto;
+		padding: 2rem 10%;
+		border: 1px solid;
+		border-image: linear-gradient(
+				45deg,
+				#9873d2,
+				transparent,
+				#5bb8daa7,
+				#ffffff00,
+				#ffffff00,
+				#9873d2
+			)
+			29;
+	}
+
+	.cluster-card-1 {
+		transition: 0.2s;
+		margin: 0 auto;
+		padding: 2rem;
+		border: 0.1px solid #232323;
+		background: radial-gradient(#140919, black);
+		box-shadow: 0px 2px 0px #5bb8daa7, 1px 1px 4rem #9773d216,
+			-0px 0px 0rem white;
+	}
+
+	.cluster-card-2 {
+		transition: 0.2s;
+		margin: 0 auto;
+		padding: 2rem;
+		background: radial-gradient(#140919, black);
+	}
+
+	.cluster-card:hover {
+		rotate: 1deg;
+		transform: scale(1.05);
+		cursor: pointer;
+		mix-blend-mode: normal;
+		box-shadow: 20px 20px 30px #5bb8da27, -20px -30px 20px #8039f11d;
+	}
+	.border-box-container {
+		@apply border border-border rounded-[10px];
+	}
+	.table-bg {
+		background: linear-gradient(
+			90deg,
+			#020203,
+			#0a050d,
+			#110815,
+			#0d0610,
+			#020203
+		);
+		@apply border border-border !p-6;
+	}
+	.btn-gradient {
+		background: linear-gradient(106deg, #5bb8da 4%, #9773d2 74%);
+	}
+	.btn-gradient-style {
+		@apply flex cursor-pointer justify-center items-center gap-x-4 font-semibold w-fit h-fit !text-white flex-grow-0 px-4 py-3 w-full min-w-[160px] rounded-[5px] bg-gradient-to-r from-[#5bb8da] via-[#5bb8da] to-[#9773d2];
+		@apply transition-all hover:bg-gradient-to-l active:scale-105 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-50;
+	}
+	.text-header {
+		background: linear-gradient(45deg, #fff, #999, #fff, #999);
+		-webkit-background-clip: text;
+		width: max-content;
+		-webkit-text-fill-color: transparent;
+		@apply text-lg font-medium tracking-wider mt-4 w-full;
+	}
+	/* ::-webkit-scrollbar {
+		display: none;
+	} */
+	* {
+		scrollbar-width: auto; /* "auto" or "thin" */
+		scrollbar-color: #9773d2 transparent;
+	}
+	/* Works on Chrome, Edge, and Safari */
+	*::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: #9773d2;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #9773d2;
+		border-radius: 20px;
+		border: 3px solid transparent;
+	}
+}
+
+.scrollbarNone{
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+.scrollbarNone::-webkit-scrollbar{
+	display: none;
+}
